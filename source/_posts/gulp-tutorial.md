@@ -1,6 +1,8 @@
+
 ---
-title: Gulp Tutorial
+title: Gulp 入门与应用
 ---
+<br/>
 
 ### Why Gulp? ###
 *gulp是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器；它不仅能对网站资源进行优化，而且在开发过程中很多重复的任务能够使用正确的工具自动完成；使用它，我们不仅可以很愉快的编写代码，而且大大提高我们的工作效率*
@@ -22,7 +24,7 @@ title: Gulp Tutorial
 这里有两个名词，第一个**nodejs**不用说了, 火遍了整个互联网，从前端到后台到处有它的身影，想必大家都知道。 npm可能有的人不清楚，npm是node package manager的缩写，这么说大家应该就明白了，说白了，npm就是nodejs的包管理器。 
 
 使用了nodejs的项目，基本上都会有node_modules这么一个目录, 这个目录就是存放nodejs的包的地方。同时还会有一个文件package.json，这是npm用来管理node_modules模块的配置文件, 它看起来像这样
-![package.json](https://content.screencast.com/users/TengFeiXi/folders/MyBlog/media/d30d3488-6f40-4885-b6f5-0df2c52a9314/package.json.jpg) 
+![package.json](/images/gulp-tutorial/package.json.jpg) 
 
 其中的 **dependencies** 指定了该项目所依赖的包
 
@@ -37,7 +39,31 @@ title: Gulp Tutorial
 ##### 目录结构
 使用了gulp的项目资源目录通常会像这样
  
-![screenshot](http://content.screencast.com/users/TengFeiXi/folders/MyBlog/media/64ad12ea-01c0-4a01-ab94-6a8cd0f904ce/static-01.png)
+![screenshot](/images/gulp-tutorial/gulp-structure.png)
+
+gulpfile.js 这个是用来定义gulp要执行的任务的配置文件
+
+#### 步骤
+1. 建立目录结构
+2. 创建package.json
+	{% codeblock %}npm init{% endcodeblock %}
+3. 下载所有必须的依赖包
+	{% codeblock %}
+	npm install --save-dev gulp
+	npm install --save-dev gulp-sass
+	npm install --save-dev gulp-concat
+	npm install --save-dev gulp-minify
+	npm install --save-dev gulp-uglifycss
+	npm install --save-dev browser-sync
+	{% endcodeblock %}
+
+	也可以这样运行
+	{% codeblock %}
+	npm install --save-dev gulp　gulp-sass　gulp-concat　gulp-minify　gulp-uglifycss　browser-sync
+	{% endcodeblock %}
+
+4. 建立gulpfile.js
+5. 运行gulp, 进行项目的开发
 
 
-2. gulpfile.js 这个是用来定义gulp要执行的任务的配置文件
+
