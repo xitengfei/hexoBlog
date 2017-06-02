@@ -57,13 +57,69 @@ gulpfile.js 这个是用来定义gulp要执行的任务的配置文件
 	npm install --save-dev browser-sync
 	{% endcodeblock %}
 
-	也可以这样运行
+	也可以这样运行(注意: 模块之间应该用空格分隔, 不能用tab分隔)
 	{% codeblock %}
-	npm install --save-dev gulp　gulp-sass　gulp-concat　gulp-minify　gulp-uglifycss　browser-sync
+	npm install --save-dev gulp gulp-sass gulp-concat gulp-minify gulp-uglifycss browser-sync
 	{% endcodeblock %}
 
 4. 建立gulpfile.js
 5. 运行gulp, 进行项目的开发
 
+最后, 附上一个gulpfile.js的例子:
 
+{% codeblock [gulpfile] [lang: nodejs] %}
+'use strict';
 
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var concat = require('gulp-concat');
+var minify = require('gulp-minify');
+var uglifycss = require('gulp-uglifycss');
+var browserSync = require('browser-sync');
+var reload  = browserSync.reload;
+
+gulp.task('styles',function(){
+    gulp.src([
+        'src/vender/rangeslider/rangeslider.css',
+        'src/sass/app.scss'
+    ])
+    .pipe(sass().on('error', sass.logError))
+    .pipe(concat('styles.min.css'))
+    .pipe(uglifycss({"maxLineLen": 800,"uglyComments": true}))
+    .pipe(gulp.dest('dest/css'));
+});
+
+gulp.task('scripts', function() {
+    gulp.src([
+        'src/vender/rangeslider/rangeslider.min.js',
+        'src/js/main.js'
+    ])
+    .pipe(concat('scripts.js'))
+    .pipe(minify({ext:{src:'.debug.js',min:'.min.js'}}))
+    .pipe(gulp.dest('dest/js'));
+});
+
+gulp.task('watch', ['build'], browserSync.reload);
+
+// BrowserSync
+gulp.task('serve', ['build'], function() {
+	browserSync({
+		server: {
+			baseDir: 'dest'
+		},
+		open: true,
+		online: false,
+		notify: true,
+	});
+
+	//要监控的文件
+	gulp.watch([
+		'src/js/main.js'
+	],['watch']);
+});
+
+gulp.task('build', ['styles', 'scripts']);
+
+gulp.task('default', ['build']);
+
+{% endcodeblock %}
