@@ -1,7 +1,9 @@
 # Header
 menu:
-  Home: /
-  Archives: /archives
+  首页: /
+  诗词: /categories/诗词/
+  技术: /categories/技术/
+  归档: /archives
 rss: /atom.xml
 
 # Content
