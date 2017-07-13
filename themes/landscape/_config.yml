@@ -1,8 +1,8 @@
 # Header
 menu:
   首页: /
-  诗词: /categories/诗词/
   技术: /categories/技术/
+  诗词: /categories/诗词/
   归档: /archives
 rss: /atom.xml
 
@@ -11,13 +11,13 @@ excerpt_link: Read More
 fancybox: true
 
 # Sidebar
-sidebar: right
+sidebar: left
 widgets:
 - category
+- recent_posts
+- archive
 - tag
 - tagcloud
-- archive
-- recent_posts
 
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:
