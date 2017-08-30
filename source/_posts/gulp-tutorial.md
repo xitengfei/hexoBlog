@@ -24,7 +24,7 @@ title: Gulp 入门与应用
 这里有两个名词，第一个**nodejs**不用说了, 火遍了整个互联网，从前端到后台到处有它的身影，想必大家都知道。 npm可能有的人不清楚，npm是node package manager的缩写，这么说大家应该就明白了，说白了，npm就是nodejs的包管理器。 
 
 使用了nodejs的项目，基本上都会有node_modules这么一个目录, 这个目录就是存放nodejs的包的地方。同时还会有一个文件package.json，这是npm用来管理node_modules模块的配置文件, 它看起来像这样
-![package.json](/images/gulp-tutorial/package.json.jpg) 
+![package.json](/blog/images/gulp-tutorial/package.json.jpg) 
 
 其中的 **dependencies** 指定了该项目所依赖的包
 
@@ -39,7 +39,7 @@ title: Gulp 入门与应用
 ##### 目录结构
 使用了gulp的项目资源目录通常会像这样
  
-![screenshot](/images/gulp-tutorial/gulp-structure.png)
+![screenshot](/blog/images/gulp-tutorial/gulp-structure.png)
 
 gulpfile.js 这个是用来定义gulp要执行的任务的配置文件
 
