@@ -1,4 +1,8 @@
 
-## category:
-诗词　poetry
-技术　technology
+
+命名规范
+文件名: postyyyymmdd-subject.md 
+分类名称：首字母大写，驼峰法
+Tag名称：全部小写
+标题：中英文均可
+路径：必须英文小写，单词用-分隔

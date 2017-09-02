@@ -1,9 +1,13 @@
 
 ---
 title: Gulp 入门与应用
-date: 2017-08-28
-tags: 前端 css
-categories: 前端构建
+date: 2017-06-28
+categories:
+- 前端构建
+- Gulp
+tags:
+- 构建工具
+- gulp
 ---
 <br/>
 

@@ -1,8 +1,12 @@
 ---
 title: WordPress 开发心得
 date: 2017-06-13 14:10:18
-tags: php wordpress
-categories: wordpress
+categories: 
+- PHP
+- wordpress
+tags: 
+- php 
+- wordpress
 ---
 
 *写这篇博客记录一下本人在两年以来在wordpress使用和开发中的心得, 也可以算是分享一下经验吧。*

@@ -1,8 +1,12 @@
 ---
-title:  子元素的margin-top 传递给了父元素
+title: 子元素的 margin-top 传递给了父元素
 date: 2017-08-28
-tags: 前端 css
-categories: css
+categories:
+- 前端
+- Css
+tags:
+- css
+- margin
 ---
 
 我们可能经常碰到这样的情况，给一个child元素加了margin-top，但是没有生效，而是传递到了父元素上。例如下面一段代码：

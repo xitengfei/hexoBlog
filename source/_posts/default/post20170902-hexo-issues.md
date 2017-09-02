@@ -1,8 +1,12 @@
 ---
 title: 使用 Hexo 碰到的一些问题
 date: 2017-09-02
-categories: githubBlog
-tags: hexo blog
+categories:
+- Blog
+- Hexo
+tags:
+- hexo
+- issues
 ---
 
 最近使用hexo的过程中碰到了一些问题，记录下来，希望或多或少能对再碰到这些问题的人有所帮助。
@@ -26,11 +30,11 @@ tags: hexo blog
 
 ### issue3: 更换主题后页面错乱
 方案：执行hexo clean 清理一下即可
-`
-hexo clean
-hexo d
-hexo server
-`
+``` bash
+$ hexo clean
+$ hexo generate
+$ hexo server
+```
 
 
 ### issue4: URL /categories 为空，如何创建 categories页面？
@@ -39,15 +43,15 @@ hexo server
 
 解决方案：
 1. 新建一个名为 categories的页面，命令：
-`
-hexo new page categories
-`
+``` bash
+$ hexo new page categories
+```
 2. 编辑这个页面，将页面的layout设置为 categories。
-`
+```
 ---
 layout: categories
 title: 分类
 date: 2017-09-02 19:03:03
 tags:
 ---
-`
+```
