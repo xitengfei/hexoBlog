@@ -1,8 +1,8 @@
 ---
 title: HTTP协议中的短轮询、长轮询、长连接和短连接
 date: 2017-06-20 13:56:41
-tags:
-category: 技术
+tags: 
+category: 网络协议
 ---
 
 

@@ -1,8 +1,8 @@
 ---
 title: Cookie 封装
 date: 2017-06-07 14:25:03
-categories: 技术
-tags:
+categories: web
+tags: cookie 封装
 ---
 
 ##### cookie 封装
