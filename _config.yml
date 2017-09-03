@@ -43,6 +43,7 @@ highlight:
   auto_detect: false
   tab_replace:
 
+
 # Category & Tag
 default_category: uncategorized
 category_map:
