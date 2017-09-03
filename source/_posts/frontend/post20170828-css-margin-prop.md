@@ -7,6 +7,9 @@ categories:
 tags:
 - css
 - margin
+
+banner: /blog/images/frontend/css_banner.png
+thumbnail: /blog/images/frontend/css_thumb.png
 ---
 
 我们可能经常碰到这样的情况，给一个child元素加了margin-top，但是没有生效，而是传递到了父元素上。例如下面一段代码：
@@ -19,6 +22,7 @@ tags:
 </div>
 ```
 
+<!-- more -->
 
 #### **原因**:
 

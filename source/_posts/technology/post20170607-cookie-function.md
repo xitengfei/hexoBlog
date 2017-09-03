@@ -7,6 +7,8 @@ tags: cookie 封装
 
 ##### cookie 封装
 
+<!-- more -->
+
 {% codeblock [cookie] [lang: javascript] %}
 function createCookie(name,value,days) {
 	if (days) {
